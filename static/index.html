@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO -->
+    <title>Доставка воды Уфа — ул. Испытателей | Свежая вода из водомата за 30 минут</title>
+    <meta name="description" content="Доставка свежей питьевой воды из водомата на улицу Испытателей в Уфе. Быстро за 30 минут, недорого. 5л, 10л, 19л. Первый заказ от 80₽. Наличные, СБП. Звоните: +7 (960) 382-53-95">
+    <meta name="keywords" content="доставка воды уфа, вода на дом уфа, вода испытателей, заказать воду уфа, водомат уфа, питьевая вода уфа, свежая вода доставка, вода 19 литров уфа, вода 5 литров, вода 10 литров">
+    <meta name="author" content="Доставка воды Уфа">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="RU-BA">
+    <meta name="geo.placename" content="Уфа">
+    
+    <!-- Open Graph (для соцсетей) -->
+    <meta property="og:title" content="Доставка воды Уфа — ул. Испытателей">
+    <meta property="og:description" content="Свежая вода из водомата за 30 минут. Доставка прямо к двери!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    
+    <!-- Schema.org разметка для Яндекса и Google -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Доставка воды Уфа",
+        "description": "Доставка свежей питьевой воды из водомата на улицу Испытателей",
+        "telephone": "+79603825395",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "ул. Испытателей",
+            "addressLocality": "Уфа",
+            "addressRegion": "Башкортостан",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 09:00-21:00",
+        "priceRange": "80-450₽"
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: #f8f9fa; }
+        
+        /* Hero */
+        .hero { min-height: 100vh; background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e5799 100%); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%); pointer-events: none; }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); color: white; margin-bottom: 1.5rem; font-weight: 700; line-height: 1.2; text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2); }
+        .hero p { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: rgba(255, 255, 255, 0.95); margin-bottom: 2rem; font-weight: 300; }
+        .hero-phone { display: inline-block; color: white; font-size: 1.8rem; font-weight: 700; text-decoration: none; margin-bottom: 2rem; padding: 0.8rem 1.5rem; border: 2px solid rgba(255,255,255,0.3); border-radius: 50px; transition: all 0.3s ease; }
+        .hero-phone:hover { background: rgba(255,255,255,0.15); border-color: white; }
+        .btn-primary { background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; border: none; padding: 1.2rem 3rem; font-size: 1.3rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4); text-decoration: none; display: inline-block; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5); }
+        
+        /* Преимущества */
+        .features { padding: 4rem 2rem; background: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { text-align: center; padding: 1.5rem; }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-title { font-size: 1.2rem; font-weight: 700; color: #1e3c72; margin-bottom: 0.5rem; }
+        .feature-text { color: #666; font-size: 0.95rem; }
+        
+        /* Products */
+        .products-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e3c72; font-weight: 700; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .product-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        .product-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; }
+        .product-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; color: #1e3c72; font-weight: 600; }
+        .product-select { width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem; background: white; cursor: pointer; }
+        .product-select:focus { outline: none; border-color: #667eea; }
+        .quantity-control { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: auto; }
+        .qty-btn { width: 45px; height: 45px; border: 2px solid #667eea; background: white; color: #667eea; border-radius: 50%; font-size: 1.5rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .qty-btn:hover { background: #667eea; color: white; }
+        .qty-display { font-size: 2rem; font-weight: 700; color: #1e3c72; min-width: 60px; text-align: center; }
+        
+        /* Отзывы */
+        .reviews-section { padding: 4rem 2rem; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .review-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .review-stars { color: #ffa500; font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .review-text { color: #555; font-style: italic; margin-bottom: 1rem; line-height: 1.6; }
+        .review-author { font-weight: 700; color: #1e3c72; }
+        .review-date { color: #999; font-size: 0.85rem; }
+        
+        /* Order Form */
+        .order-section { background: white; padding: 3rem 2rem; max-width: 800px; margin: 4rem auto; border-radius: 20px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; color: #555; font-weight: 500; font-size: 1rem; }
+        .form-input { width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s ease; }
+        .form-input:focus { outline: none; border-color: #667eea; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .total-display { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 1.5rem; border-radius: 15px; text-align: center; margin: 2rem 0; font-size: 1.8rem; font-weight: 700; }
+        .btn-submit { width: 100%; background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%); color: white; border: none; padding: 1.2rem; font-size: 1.3rem; font-weight: 600; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5); }
+        
+        /* Контакты */
+        .contacts-section { padding: 4rem 2rem; background: #1e3c72; color: white; text-align: center; }
+        .contacts-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .contact-item { font-size: 1.3rem; margin-bottom: 1rem; }
+        .contact-item a { color: #f7931e; text-decoration: none; font-weight: 700; font-size: 1.5rem; }
+        .contact-item a:hover { text-decoration: underline; }
+        
+        /* Footer */
+        footer { background: #0f1f3d; color: rgba(255,255,255,0.7); text-align: center; padding: 2rem; font-size: 0.9rem; }
+        
+        @media(max-width: 768px) {
+            .products-grid, .reviews-grid, .features-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero-phone { font-size: 1.3rem; }
+            .section-title { font-size: 2rem; }
+            .order-section { margin: 2rem 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Свежая вода из водомата за 30 минут</h1>
+            <p>Доставка прямо к вашей двери на улице Испытателей (Уфа)</p>
+            <a href="tel:+79603825395" class="hero-phone">📞 +7 (960) 382-53-95</a>
+            
+
+            <a href="#order" class="btn-primary">Заказать воду</a>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title">Быстрая доставка</h3>
+                <p class="feature-text">Привезём воду за 30 минут в пределах района</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h3 class="feature-title">Свежая вода</h3>
+                <p class="feature-text">Чистая питьевая вода из проверенного водомата</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Низкие цены</h3>
+                <p class="feature-text">От 80₽ за бутыль. Обмен тары дешевле!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"></div>
+                <h3 class="feature-title">Ежедневно</h3>
+                <p class="feature-text">Работаем без выходных с 9:00 до 21:00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products-section">
+        <h2 class="section-title">Выберите воду</h2>
+        <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой</p>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-title">5 литров</h3>
+                <select class="product-select" data-product-id="5">
+                    <option value="120" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 120₽</option>
+                    <option value="80" data-type="Обмен тары">Обмен тары — 80₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="5">−</button>
+                    <span class="qty-display" data-qty-display="5">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="5">+</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+
+
+                <div class="product-icon">💧</div>
+                <h3 class="product-title">10 литров</h3>
+                <select class="product-select" data-product-id="10">
+                    <option value="200" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 200₽</option>
+                    <option value="140" data-type="Обмен тары">Обмен тары — 140₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="10">−</button>
+                    <span class="qty-display" data-qty-display="10">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="10">+</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-title">19 литров</h3>
+                <select class="product-select" data-product-id="19">
+                    <option value="450" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 450₽</option>
+                    <option value="250" data-type="Обмен тары">Обмен тары — 250₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="19">−</button>
+                    <span class="qty-display" data-qty-display="19">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="19">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="reviews-section">
+        <h2 class="section-title">Отзывы наших клиентов</h2>
+        <p class="section-subtitle">Нам доверяют жители улицы Испытателей</p>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Заказываю воду уже 3 месяца. Привозят быстро, вода вкусная. Обмен тары очень удобный — не нужно таскать пустые бутыли обратно!»</p>
+                <div class="review-author">Альфия К.</div>
+                <div class="review-date">Испытателей, 12</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Отличный сервис! Заказал 19 литров — привезли за 20 минут. Цена адекватная, курьер вежливый. Рекомендую!»</p>
+                <div class="review-author">Рустам М.</div>
+                <div class="review-date">Испытателей, 8</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Берём воду для офиса — 2 бутыли по 19 литров в неделю. Всегда свежая, доставка точная. Спасибо!»</p>
+                <div class="review-author">Офис «ТехноСервис»</div>
+                <div class="review-date">Испытателей, 15</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Первый раз заказала — боялась, что вода невкусная. Оказалось очень даже ничего! Теперь постоянный клиент.»</p>
+                <div class="review-author">Гульнара Ш.</div>
+                <div class="review-date">Испытателей, 22</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Удобно что можно заказать через сайт. Выбрал количество, оплатил переводом — через полчаса вода у двери.»</p>
+                <div class="review-author">Айрат В.</div>
+                <div class="review-date">Испытателей, 5</div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">«Дети пьют с удовольствием. Раньше покупали в магазине, но тут дешевле и свежее. Спасибо за быструю доставку!»</p>
+                <div class="review-author">Лилия Х.</div>
+                <div class="review-date">Испытателей, 18</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form -->
+    <section class="order-section" id="order">
+        <h2 class="section-title">Оформление заказа</h2>
+        <p class="section-subtitle">Или позвоните: <a href="tel:+79603825395" style="color:#ff6b35;font-weight:700;">+7 (960) 382-53-95</a></p>
+        <form id="orderForm">
+            <div class="form-group">
+                <label class="form-label" for="name">Ваше имя</label>
+                <input type="text" id="name" class="form-input" placeholder="Имя" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="phone">Телефон</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="house">Номер дома</label>
+                    <input type="text" id="house" class="form-input" placeholder="Улица Испытателей, дом..." required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="apartment">Квартира</label>
+                    <input type="text" id="apartment" class="form-input" placeholder="Кв." required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="payment">Способ оплаты</label>
+                <select id="payment" class="form-input">
+                    <option value="Наличные курьеру">💵 Наличные курьеру</option>
+                    <option value="Перевод на карту (СБП)">💳 Перевод на карту (СБП)</option>
+                    <option value="Оплачено">✅ Уже оплачено</option>
+                </select>
+            </div>
+            <div class="total-display">
+                Итого: <span id="totalAmount">0</span> ₽
+            </div>
+            <button type="submit" class="btn-submit">Оформить заказ</button>
+        </form>
+    </section>
+
+    <!-- Контакты -->
+    <section class="contacts-section">
+        <h2>Контакты</h2>
+        <div class="contact-item">📞 Телефон: <a href="tel:+79603825395">+7 (960) 382-53-95</a></div>
+        <div class="contact-item">📍 Район доставки: ул. Испытателей, Уфа</div>
+        <div class="contact-item">🕐 Режим работы: ежедневно 9:00 — 21:00</div>
+    </section>
+
+    <footer>
+        <p>© 2026 Доставка воды Уфа. Все права защищены.</p>
+        <p>Свежая вода из водомата с доставкой на дом</p>
+    </footer>
+
+    <script>
+        const orderData = {
+            '5': { quantity: 0, price: 120, type: 'Первый заказ (с тарой)', name: '5 литров' },
+            '10': { quantity: 0, price: 200, type: 'Первый заказ (с тарой)', name: '10 литров' },
+            '19': { quantity: 0, price: 450, type: 'Первый заказ (с тарой)', name: '19 литров' }
+        };
+
+        document.querySelectorAll('.qty-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productId = this.dataset.productId;
+                const action = this.dataset.action;
+                const display = document.querySelector(`[data-qty-display="${productId}"]`);
+                
+                if (action === 'increase') {
+                    orderData[productId].quantity++;
+                } else if (action === 'decrease' && orderData[productId].quantity > 0) {
+                    orderData[productId].quantity--;
+                }
+                
+                display.textContent = orderData[productId].quantity;
+                updateTotal();
+            });
+        });
+
+        document.querySelectorAll('.product-select').forEach(select => {
+            select.addEventListener('change', function() {
+                const productId = this.dataset.productId;
+                const selectedOption = this.options[this.selectedIndex];
+                orderData[productId].price = parseInt(this.value);
+                orderData[productId].type = selectedOption.dataset.type;
+                updateTotal();
+            });
+        });
+
+        function updateTotal() {
+            let total = 0;
+            Object.values(orderData).forEach(item => {
+                total += item.quantity * item.price;
+            });
+            document.getElementById('totalAmount').textContent = total;
+        }
+
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const hasItems = Object.values(orderData).some(item => item.quantity > 0);
+            if (!hasItems) {
+                alert('Выберите количество бутылей!');
+                return;
+            }
+
+            const items = [];
+            Object.entries(orderData).forEach(([id, item]) => {
+                if (item.quantity > 0) {
+                    items.push({
+                        name: item.name,
+                        type: item.type,
+                        quantity: item.quantity,
+                        price: item.price
+                    });
+                }
+            });
+
+            const orderPayload = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                house: document.getElementById('house').value,
+                apartment: document.getElementById('apartment').value,
+                payment: document.getElementById('payment').value,
+                items: items,
+                total: items.reduce((sum, item) => sum + (item.quantity * item.price), 0)
+            };
+
+            try {
+                const response = await fetch('/api/order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderPayload)
+                });
+
+                if (response.ok) {
+                    alert('Заказ успешно принят! Мы перезвоним вам в течение 5 минут.');
+                    this.reset();
+                    Object.keys(orderData).forEach(id => {
+                        orderData[id].quantity = 0;
+                        document.querySelector(`[data-qty-display="${id}"]`).textContent = '0';
+                    });
+                    updateTotal();
+                } else {
+                    alert('Произошла ошибка при оформлении заказа. Позвоните нам: +7 (960) 382-53-95');
+                }
+            } catch (error) {
+                alert('Ошибка соединения. Позвоните нам: +7 (960) 382-53-95');
+                console.error('Error:', error);
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
