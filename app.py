@@ -85,6 +85,7 @@ def create_order():
             'house': data['house'],
             'apartment': data['apartment'],
             'payment': data['payment'],
+            'comment': data.get('comment', 'Не указан'),
             'items': data['items'],
             'total': data['total'],
             'status': 'new'
