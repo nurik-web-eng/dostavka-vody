@@ -40,7 +40,7 @@ def send_vk_notification(order):
 💳 Оплата: {order['payment']}
 📝 Комментарий: {order['comment']}
 💰 Итого: {order['total']}₽
-🕐 Время: {order['timestamp']}"""
+🕐 Время: {order['timestamp': (datetime.utcnow() + timedelta(hours=5)).strftime('%d, %m.%Y, %H:%M')]}"""
 
         # Отправляем администратору
         vk.messages.send(
