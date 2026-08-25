@@ -384,9 +384,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <script>
         const orderData = {
-            '5': { quantity: 0, price: 120, type: 'Первый заказ (с тарой)', name: '5 литров' },
+            '5': { quantity: 0, price: 100, type: 'Первый заказ (с тарой)', name: '5 литров' },
             '10': { quantity: 0, price: 200, type: 'Первый заказ (с тарой)', name: '10 литров' },
-            '19': { quantity: 0, price: 450, type: 'Первый заказ (с тарой)', name: '19 литров' }
+            '19': { quantity: 0, price: 100
+                   , type: 'Первый заказ (с тарой)', name: '19 литров' }
         };
 
         document.querySelectorAll('.qty-btn').forEach(btn => {
@@ -424,9 +425,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // Проверка доставки (+80 рублей, если сумма меньше 300)
     let deliveryMessage = "";
     if (total > 0) {
-        if (total < 300) {
-            total = total + 80; // прибавляем 80 руб за доставку
-            deliveryMessage = " (с учетом доставки 80 ₽)";
+        if (total < 500) {
+            total = total + 100; // прибавляем 80 руб за доставку
+            deliveryMessage = " (с учетом доставки 100 ₽)";
         } else {
             deliveryMessage = " (доставка бесплатно 🎉)";
         }
