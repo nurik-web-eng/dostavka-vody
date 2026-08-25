@@ -408,5 +408,56 @@ html{
 </body>
 </html>
 
+<script>
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Проверяем количество
+  const quantity = document.getElementById('quantity').value;
+  
+  if (!quantity || quantity <= 0) {
+    // Если не выбрано — показываем ошибку и перекидываем на главную
+    alert('⚠️ Пожалуйста, выберите количество бутылей!');
+    
+    // Перенаправляем на главную (или на секцию с товарами)
+    window.location.href = '/#products'; // или просто '/' для главной
+    
+    return false;
+  }
+  
+  // Если всё ок — отправляем форму
+  submitOrder();
+});
+
+function submitOrder() {
+  const formData = {
+    quantity: document.getElementById('quantity').value,
+    name: document.getElementById('name').value,
+    phone: document.getElementById('phone').value,
+    house: document.getElementById('house').value,
+    apartment: document.getElementById('apartment').value,
+    payment: document.getElementById('payment').value
+  };
+  
+  fetch('/api/order', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(formData)
+  })
+  .then(response => response.json())
+  .then(data => {
+    alert('✅ Заказ оформлен! Мы скоро свяжемся с вами.');
+    document.getElementById('orderForm').reset();
+  })
+  .catch(error => {
+    alert('❌ Ошибка при оформлении заказа. Попробуйте снова.');
+    console.error('Error:', error);
+  });
+}
+</script>
+
+
+
+
 
 
