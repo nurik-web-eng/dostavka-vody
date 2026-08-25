@@ -130,7 +130,7 @@
             <a href="tel:+79603825395" class="hero-phone">📞 +7 (960) 382-53-95</a>
             
 
-            <a href="#order" class="btn-primary">Заказать воду</a>
+            <a href="#product" class="btn-primary">Заказать воду</a>
         </div>
     </section>
 
@@ -161,7 +161,7 @@
     </section>
 
     <!-- Products -->
-    <section class="products-section">
+    <section class="products-section" id="product">
         <h2 class="section-title">Выберите воду</h2>
         <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой</p>
         <div class="products-grid">
@@ -210,6 +210,35 @@
             </div>
         </div>
     </section>
+    <div style="text-align: center; margin: 30px 0 40px 0;">
+    <button id="go-to-form-btn" style="background-color: #ff6b00; color: white; border: none; padding: 16px 50px; border-radius: 8px; font-weight: bold; font-size: 18px; cursor: pointer; font-family: sans-serif; box-shadow: 0 4px 15px rgba(255, 107, 0, 0.3); transition: background 0.2s;">
+        Оформить заказ
+    </button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const orderBtn = document.getElementById('go-to-form-btn');
+
+    orderBtn.addEventListener('click', () => {
+        // Скрипт ищет инпут телефона в самом низу страницы
+        const inputField = document.querySelector('input[type="tel"]') || document.querySelector('input[placeholder*="Телефон"]');
+        
+        if (inputField) {
+            // Плавно прокручивает страницу прямо к форме оформления
+            inputField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Автоматически ставит курсор в поле, чтобы пользователь сразу мог писать
+            setTimeout(() => inputField.focus(), 600);
+        } else {
+            // Если форма не найдена, просто мотает в самый низ
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
+    });
+});
+</script>
+
+
+
 
     <!-- Отзывы -->
     <section class="reviews-section">
