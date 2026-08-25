@@ -38,7 +38,7 @@ def send_vk_notification(order):
 📦 Товары:
 {items_text}
 💳 Оплата: {order['payment']}
-
+📝 Комментарий: {order['comment']}
 💰 Итого: {order['total']}₽
 🕐 Время: {order['timestamp']}"""
 
