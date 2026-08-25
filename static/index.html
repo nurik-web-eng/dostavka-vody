@@ -416,12 +416,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             });
-
+            const comment = document.getElementById('comment').value;
             const orderPayload = {
                 name: document.getElementById('name').value,
                 phone: document.getElementById('phone').value,
                 house: document.getElementById('house').value,
                 apartment: document.getElementById('apartment').value,
+                comment: comment,
                 payment: document.getElementById('payment').value,
                 items: items,
                 total: items.reduce((sum, item) => sum + (item.quantity * item.price), 0)
