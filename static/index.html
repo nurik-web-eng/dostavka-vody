@@ -65,8 +65,8 @@
         
         /* Products */
         .products-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
-        .section-title {font-size: 2rem;color: #333;text-align: center;margin-bottom: 10px;}
-        .section-subtitle {font-size: 1rem;color: #666; text-align: center;margin-bottom: 30px;}
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e3c72; font-weight: 700; }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem; }
         .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
         .product-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; display: flex; flex-direction: column; }
         .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
@@ -118,9 +118,6 @@
             .section-title { font-size: 2rem; }
             .order-section { margin: 2rem 1rem; }
         }
-html{
-    scroll-behavior: smooth;
-}
     </style>
 </head>
 <body>
@@ -133,7 +130,7 @@ html{
             <a href="tel:+79603825395" class="hero-phone">📞 +7 (960) 382-53-95</a>
             
 
-            <a href="#products"class="btn-primary">Заказать воду</a>
+            <a href="#order" class="btn-primary">Заказать воду</a>
         </div>
     </section>
 
@@ -164,7 +161,7 @@ html{
     </section>
 
     <!-- Products -->
-    <section class="products-section" id="products">
+    <section class="products-section">
         <h2 class="section-title">Выберите воду</h2>
         <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой</p>
         <div class="products-grid">
@@ -213,9 +210,6 @@ html{
             </div>
         </div>
     </section>
-    <div style="text-align:center; margin: 30px 0;">
-    <a href="#order" class="btn-primary" style="background:#ff6600; padding:15px 40px; font-size:18px;">Оформить доставку>
-</div>
 
     <!-- Отзывы -->
     <section class="reviews-section">
@@ -263,9 +257,8 @@ html{
 
     <!-- Order Form -->
     <section class="order-section" id="order">
-    
         <h2 class="section-title">Оформление заказа</h2>
-        <p class="section-subtitle">Или позвоните: <a href="tel:+79603825395">+7 (960) 382-53-95</a></p>
+        <p class="section-subtitle">Или позвоните: <a href="tel:+79603825395" style="color:#ff6b35;font-weight:700;">+7 (960) 382-53-95</a></p>
         <form id="orderForm">
             <div class="form-group">
                 <label class="form-label" for="name">Ваше имя</label>
@@ -409,7 +402,8 @@ html{
             }
         });
     </script>
-
 </body>
 </html>
+
+
 
