@@ -389,7 +389,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     // Выводим финальную сумму и текст-подсказку на фиолетовую плашку
-    document.getElementById('totalAmount').innerHTML = total + `<span style="font-size: 13px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.8;">${deliveryMessage}</span>`;
+   document.getElementById('totalAmount').innerHTML = `${total} ₽ <span style="font-size: 13px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.8;">${deliveryMessage}</span>`;
         }
 
         document.getElementById('orderForm').addEventListener('submit', async function(e) {
