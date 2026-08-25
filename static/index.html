@@ -377,7 +377,19 @@ document.addEventListener("DOMContentLoaded", () => {
             Object.values(orderData).forEach(item => {
                 total += item.quantity * item.price;
             });
-            document.getElementById('totalAmount').textContent = total;
+            // Проверка доставки (+80 рублей, если сумма меньше 300)
+    let deliveryMessage = "";
+    if (total > 0) {
+        if (total < 300) {
+            total = total + 80; // прибавляем 80 руб за доставку
+            deliveryMessage = " (с учетом доставки 80 ₽)";
+        } else {
+            deliveryMessage = " (доставка бесплатно 🎉)";
+        }
+    }
+    
+    // Выводим финальную сумму и текст-подсказку на фиолетовую плашку
+    document.getElementById('totalAmount').innerHTML = total + `<span style="font-size: 13px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.8;">${deliveryMessage}</span>`;
         }
 
         document.getElementById('orderForm').addEventListener('submit', async function(e) {
@@ -434,89 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     </script>
-    <script>
-    function recalculateCart() {
-    let totalItems = 0;
-    let productsPrice = 0; // Стоимость только воды и тары
-
-    // 1. Ищем все карточки товаров на странице
-    const cards = document.querySelectorAll('.card, [class*="card"]');
-
-    cards.forEach(card => {
-        const countEl = card.querySelector('.count-value') || card.querySelector('span[class*="count"]');
-        const selectEl = card.querySelector('select');
-
-        if (countEl && selectEl) {
-            const count = parseInt(countEl.innerText.trim()) || 0;
-            const currentPrice = parseInt(selectEl.value) || 0;
-
-            if (count > 0) {
-                totalItems += count;
-                productsPrice += count * currentPrice;
-            }
-        }
-    });
-
-    let finalTotalPrice = productsPrice;
-    let deliveryCost = 0;
-    let deliveryMessage = ""; // Текст-объяснение для клиента
-
-    // 2. УСЛОВИЕ ДОСТАВКИ С ПОЯСНЕНИЕМ
-    if (productsPrice > 0) { 
-        if (productsPrice < 300) {
-            deliveryCost = 80;
-            finalTotalPrice = productsPrice + deliveryCost;
-            // Понятное объяснение, почему цена изменилась
-            deliveryMessage = ` (включая доставку +80 ₽, так как заказ менее 300 ₽)`;
-        } else {
-            deliveryCost = 0;
-            deliveryMessage = ` (доставка бесплатно 🎉)`;
-        }
-    }
-
-    // 3. ОБНОВЛЯЕМ ЭКРАН КЛИЕНТА
     
-    // Обновляем текст в плавающей корзине (если вы её используете)
-    const cartTotalText = document.getElementById('cart-total');
-    if (cartTotalText) {
-        if (productsPrice > 0) {
-            cartTotalText.innerHTML = `Итого: ${finalTotalPrice} ₽ <span style="font-size:12px; font-weight:normal; color:#ff6b00; display:block;">${deliveryMessage}</span>`;
-        } else {
-            cartTotalText.innerText = `Итого: 0 ₽`;
-        }
-    }
-
-    // Обновляем сине-фиолетовую плашку «Итого» над кнопкой заказа (как на вашем фото)
-    const allDivs = document.querySelectorAll('div, span, button');
-    allDivs.forEach(el => {
-        // Ищем элемент, где написано слово "Итого:"
-        if (el.innerText && el.innerText.startsWith('Итого:')) {
-            if (productsPrice > 0) {
-                // Выводим: "Итого: 170 ₽" крупно, а ниже мелко расшифровку
-                el.innerHTML = `
-                    <div style="font-size: 20px; font-weight: bold; margin-bottom: 4px;">Итого: ${finalTotalPrice} ₽</div>
-                    <div style="font-size: 13px; font-weight: normal; opacity: 0.9;">
-                        Вода: ${productsPrice} ₽ | Доставка: ${deliveryCost === 0 ? 'Бесплатно' : deliveryCost + ' ₽'}
-                    </div>
-                `;
-            } else {
-                el.innerHTML = `<div style="font-size: 20px; font-weight: bold;">Итого: 0 ₽</div>`;
-            }
-        }
-    });
-}
-
-// Связываем пересчет с действиями пользователя
-document.addEventListener('DOMContentLoaded', () => {
-    const allSelects = document.querySelectorAll('select');
-    allSelects.forEach(select => {
-        select.addEventListener('change', recalculateCart);
-    });
-
-    document.addEventListener('click', () => {
-        setTimeout(recalculateCart, 50);
-    });
-});
 </body>
 </html>
 
