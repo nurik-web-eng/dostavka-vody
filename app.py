@@ -40,7 +40,7 @@ def send_vk_notification(order):
 💳 Оплата: {order['payment']}
 📝 Комментарий: {order['comment']}
 💰 Итого: {order['total']}₽
-🕐 Время: {order['timestamp': (datetime.utcnow() + timedelta(hours=5)).strftime('%d, %m.%Y, %H:%M')]}"""
+🕐 Время: {order['timestamp']}"""
 
         # Отправляем администратору
         vk.messages.send(
@@ -79,7 +79,7 @@ def create_order():
         # Создаем заказ
         order = {
             'id': len(orders) + 1,
-            'timestamp': datetime.now().strftime('%d.%m.%Y %H:%M'),
+            'timestamp': (datetime.utcnow() + timedelta(hours=5)).strftime('%d.%m.%Y %H:%M'),
             'name': data['name'],
             'phone': data['phone'],
             'house': data['house'],
