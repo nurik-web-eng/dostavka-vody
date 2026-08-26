@@ -205,14 +205,16 @@ body::after {
     <!-- Products -->
     <section class="products-section" id="product">
         <h2 class="section-title">Выберите воду</h2>
-        <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой +70рублей</p>
+        <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой 5л = +70рублей
+                                                                                        10(5лx2) = +140рублей
+                                                                                        19л = +160рублей</p>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-icon">💧</div>
                 <h3 class="product-title">5 литров</h3>
                 <select class="product-select" data-product-id="5">
-                    <option value="120" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 100₽</option>
-                    <option value="80" data-type="Обмен тары">Обмен тары — 30₽</option>
+                    <option value="120" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 130₽</option>
+                    <option value="80" data-type="Обмен тары">Обмен тары — 60₽</option>
                 </select>
                 <div class="quantity-control">
                     <button class="qty-btn" data-action="decrease" data-product-id="5">−</button>
@@ -227,8 +229,8 @@ body::after {
                 <div class="product-icon">💧</div>
                 <h3 class="product-title">10 литров</h3>
                 <select class="product-select" data-product-id="10">
-                    <option value="200" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 110₽</option>
-                    <option value="140" data-type="Обмен тары">Обмен тары — 50₽</option>
+                    <option value="200" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 250₽</option>
+                    <option value="140" data-type="Обмен тары">Обмен тары — 110₽</option>
                 </select>
                 <div class="quantity-control">
                     <button class="qty-btn" data-action="decrease" data-product-id="10">−</button>
@@ -242,7 +244,7 @@ body::after {
                 <h3 class="product-title">19 литров</h3>
                 <select class="product-select" data-product-id="19">
                     <option value="450" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 156₽</option>
-                    <option value="250" data-type="Обмен тары">Обмен тары — 86₽</option>
+                    <option value="250" data-type="Обмен тары">Обмен тары — 300₽</option>
                 </select>
                 <div class="quantity-control">
                     <button class="qty-btn" data-action="decrease" data-product-id="19">−</button>
@@ -384,10 +386,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     <script>
         const orderData = {
-            '5': { quantity: 0, price: 100, type: 'Первый заказ (с тарой)', name: '5 литров' },
-            '10': { quantity: 0, price: 200, type: 'Первый заказ (с тарой)', name: '10 литров' },
-            '19': { quantity: 0, price: 100
-                   , type: 'Первый заказ (с тарой)', name: '19 литров' }
+            '5': { quantity: 0, price: 140, type: 'Первый заказ (с тарой)', name: '5 литров' },
+            '10': { quantity: 0, price: 250, type: 'Первый заказ (с тарой)', name: '10 литров' },
+            '19': { quantity: 0, price: 300, type: 'Первый заказ (с тарой)', name: '19 литров' }
         };
 
         document.querySelectorAll('.qty-btn').forEach(btn => {
@@ -426,8 +427,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let deliveryMessage = "";
     if (total > 0) {
         if (total < 500) {
-            total = total + 100; // прибавляем 80 руб за доставку
-            deliveryMessage = " (с учетом доставки 100 ₽)";
+            total = total + 150; // прибавляем 80 руб за доставку
+            deliveryMessage = " (с учетом доставки 150 ₽)";
         } else {
             deliveryMessage = " (доставка бесплатно 🎉)";
         }
