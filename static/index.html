@@ -426,9 +426,9 @@ document.addEventListener("DOMContentLoaded", () => {
             // Проверка доставки (+80 рублей, если сумма меньше 300)
     let deliveryMessage = "";
     if (total > 0) {
-        if (total < 0) {
-            total = total + 0; // прибавляем 80 руб за доставку
-            deliveryMessage = " (с учетом доставки 150 ₽)";
+        if (total < 300) {
+            total = total + 130; // прибавляем 80 руб за доставку
+            deliveryMessage = " (с учетом доставки 130 ₽)";
         } else {
             deliveryMessage = " (доставка бесплатно 🎉)";
         }
