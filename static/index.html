@@ -160,9 +160,13 @@ body::after {
             .section-title { font-size: 2rem; }
             .order-section { margin: 2rem 1rem; }
         }
+   .hidden-reviews {
+    display: none !important;
+}
     </style>
 </head>
-<body>
+<body
+    
 
     <!-- Hero -->
     <section class="hero">
@@ -283,6 +287,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     <!-- Отзывы -->
+    <!-- 1. Вставляем кнопку на видное место -->
+<div style="text-alignt: center; margin: 20px 0;">
+    <button id="show-reviews-btn" style="paddings: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; background-color: #6366f1; color: white; border: none;">Посмотреть отзывы</button>
+</div>
+
+<!-- 2. Оборачиваем твой текущий блок с отзывами в этот div -->
+<div id="reviews-block" class="hidden-reviews">
+   
+
+</div>
     <section class="reviews-section">
         <h2 class="section-title">Отзывы наших клиентов</h2>
         <p class="section-subtitle">Нам доверяют жители мкрн Кузнецовского затона</p>
@@ -490,7 +504,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     </script>
+    <script>
+  document.getElementById('show-reviews-btn').addEventListener('click', function() {
+    const reviews = document.getElementById('reviews-block');
     
+    // Проверяем, скрыт ли блок сейчас
+    if (reviews.classList.contains('hidden-reviews')) {
+      reviews.classList.remove('hidden-reviews'); // Показываем блок
+      this.textContent = 'Скрыть отзывы';         // Меняем текст на кнопке
+    } else {
+      reviews.classList.add('hidden-reviews');    // Снова скрываем блок
+      this.textContent = 'Посмотреть отзывы';     // Возвращаем текст кнопке
+    }
+  });
+
+    </script>
 </body>
 </html>
 
