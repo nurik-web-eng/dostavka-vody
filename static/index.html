@@ -205,15 +205,13 @@ body::after {
     <!-- Products -->
     <section class="products-section" id="product">
         <h2 class="section-title">Выберите воду</h2>
-        <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой 5л = +70рублей,
-                                                                                         10(5лx2) = +140рублей,
-                                                                                          19л = +160рублей</p>
+        <p class="section-subtitle">Обмен тары — выгоднее! Первый заказ — с новой тарой <br>Набери товар на 300 и доставка бесплатная<br>Внимание: Мы работаем только по системы обмена тары. При получении заказа вам нужно передать курьеру пустые чистые бутылки 5л или 19л</p>
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-icon">💧</div>
                 <h3 class="product-title">5 литров</h3>
                 <select class="product-select" data-product-id="5">
-                    <option value="130" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 130₽</option>
+                    
                     <option value="80" data-type="Обмен тары">Обмен тары — 80₽</option>
                 </select>
                 <div class="quantity-control">
@@ -229,7 +227,7 @@ body::after {
                 <div class="product-icon">💧</div>
                 <h3 class="product-title">10 литров</h3>
                 <select class="product-select" data-product-id="10">
-                    <option value="250" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 250₽</option>
+                    
                     <option value="110" data-type="Обмен тары">Обмен тары — 110₽</option>
                 </select>
                 <div class="quantity-control">
@@ -243,7 +241,7 @@ body::after {
                 <div class="product-icon">💧</div>
                 <h3 class="product-title">19 литров</h3>
                 <select class="product-select" data-product-id="19">
-                    <option value="300" data-type="Первый заказ (с тарой)">Первый заказ (с тарой) — 300₽</option>
+                    
                     <option value="156" data-type="Обмен тары">Обмен тары — 156₽</option>
                 </select>
                 <div class="quantity-control">
@@ -385,11 +383,7 @@ document.addEventListener("DOMContentLoaded", () => {
     </footer>
 
     <script>
-        const orderData = {
-            '5': { quantity: 0, price: 140, type: 'Первый заказ (с тарой)', name: '5 литров' },
-            '10': { quantity: 0, price: 250, type: 'Первый заказ (с тарой)', name: '10 литров' },
-            '19': { quantity: 0, price: 300, type: 'Первый заказ (с тарой)', name: '19 литров' }
-        };
+        
 
         document.querySelectorAll('.qty-btn').forEach(btn => {
             btn.addEventListener('click', function() {
