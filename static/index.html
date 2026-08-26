@@ -172,7 +172,7 @@ body::after {
     <section class="hero">
         <div class="hero-content">
             <h1>Свежая вода из водомата за 30 минут</h1>
-            <p>Доставка прямо к вашей двери на улице Испытателей (Уфа)</p>
+            <p>Доставка прямо к вашей двери на мкрн Кузнецовский затон</p>
             <a href="tel:+79603825395" class="hero-phone">📞 +7 (960) 382-53-95</a>
             
 
@@ -286,17 +286,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    <!-- Отзывы -->
-    <!-- 1. Вставляем кнопку на видное место -->
-<div style="text-alignt: center; margin: 20px 0;">
-    <button id="show-reviews-btn" style="paddings: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; background-color: #6366f1; color: white; border: none;">Посмотреть отзывы</button>
-</div>
+<!-- 1. Кнопка для показа отзывов (ровно по центру) -->
+<div style="text-align: center; margin: 30px 0;">
+    <button id="show-reviews-btn" style="padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 8px; background-color: #6366f1; color: white; border: none;">Посмотреть отзывы</button>
 
-<!-- 2. Оборачиваем твой текущий блок с отзывами в этот div -->
+
+<!-- 2. Контейнер отзывов (теперь он открыт и обернёт карточки) -->
 <div id="reviews-block" class="hidden-reviews">
-   
 
-</div>
+
     <section class="reviews-section">
         <h2 class="section-title">Отзывы наших клиентов</h2>
         <p class="section-subtitle">Нам доверяют жители мкрн Кузнецовского затона</p>
@@ -338,6 +336,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="review-date">Испытателей, 18</div>
             </div>
         </div>
+         </div>
     </section>
 
     <!-- Order Form -->
