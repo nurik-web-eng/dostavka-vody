@@ -383,8 +383,11 @@ document.addEventListener("DOMContentLoaded", () => {
     </footer>
 
     <script>
-        const orderData ={};
-
+        const orderData = {
+            '5': { quantity: 0, price: 120, type: 'Первый заказ (с тарой)', name: '5 литров' },
+            '10': { quantity: 0, price: 200, type: 'Первый заказ (с тарой)', name: '10 литров' },
+            '19': { quantity: 0, price: 450, type: 'Первый заказ (с тарой)', name: '19 литров' }
+        };
         document.querySelectorAll('.qty-btn').forEach(btn => {
             btn.addEventListener('click', function() {
                 const productId = this.dataset.productId;
