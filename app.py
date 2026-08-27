@@ -7,7 +7,7 @@ import vk_api
 app = Flask(__name__, static_folder='static')
 CORS(app)
 
-# ========== НАСТРОЙКИ VK ==========
+# ========= НАСТРОЙКИ VK ==========
 # Замени на свои данные!
 VK_TOKEN = 'vk1.a.CMOIYEJeU19yaaA9JvXjyWiZUM6eQxkUwRwblGjfsJgT9Ik9MonA_JccVuUQ0GAHlGSi2ovpWD26OYdwLc9c522d-bZ-rWDf--WbySXgBczC8BjTcQHNfNg-a4_q1STCnkQqrDFtfCzUIpcLikH5-F0b5Pa0tsACgDeuBB_hKSCtWJ6qjZVJ8NIYJfTese8T5bMKMPPcy001ksNKmXPUag'      # Токен сообщества VK
 VK_GROUP_ID = 241042943                  # ID сообщества (число, без минуса)
