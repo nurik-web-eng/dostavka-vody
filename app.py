@@ -142,4 +142,4 @@ if __name__ == '__main__':
     print("📍 http://localhost:5000")
     print(" Уведомления отправляются в VK")
   
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
