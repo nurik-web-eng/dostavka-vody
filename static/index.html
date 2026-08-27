@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YanshishmaWater — Доставка воды Уфа, мкрн Кузнецовский затон</title>
+    <meta name="description" content="Доставка свежей питьевой воды из водомата на мкрн Кузнецовский затон, Уфа. Быстро за 30 минут, недорого. 5л, 10л, 19л. Первый заказ от 80₽. Наличные, СБП. Звоните: +7 (960) 382-53-95">
+    <meta name="keywords" content="доставка воды уфа, вода на дом уфа, вода Кузнецовский затон, заказать воду уфа, водомат уфа, питьевая вода уфа, һыу еткереү Өфө, YanshishmaWater">
+    <meta name="author" content="YanshishmaWater">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="RU-BA">
+    <meta name="geo.placename" content="Уфа">
+    
+    <meta property="og:title" content="YanshishmaWater — Доставка свежей воды в Уфе">
+    <meta property="og:description" content="Свежая вода из водомата за 30 минут. Доставка прямо к двери!">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:image" content="https://dostavka-vody-production.up.railway.app/static/images/logo.png">
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "YanshishmaWater",
+        "description": "Доставка свежей питьевой воды из водомата на мкрн Кузнецовский затон",
+        "telephone": "+79603825395",
+        "url": "https://dostavka-vody-production.up.railway.app", 
+        "logo": "https://dostavka-vody-production.up.railway.app/static/images/logo.png",
+        "image": "https://dostavka-vody-production.up.railway.app/static/images/logo.png",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "мкрн. Кузнецовский затон",
+            "addressLocality": "Уфа",
+            "addressRegion": "Башкортостан",
+            "addressCountry": "RU"
+        },
+        "openingHours": "Mo-Su 09:00-21:00",
+        "priceRange": "80-450₽"
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
+            line-height: 1.6; 
+            color: #2c3e2d; 
+            background: #f8faf8; 
+            position: relative;
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        body::before, body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            width: 40px;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 80'%3E%3Cpath d='M20,0 L40,20 L20,40 L0,20 Z' fill='%23FFD700' opacity='0.3'/%3E%3Cpath d='M20,40 L40,60 L20,80 L0,60 Z' fill='%23009B77' opacity='0.3'/%3E%3Ccircle cx='20' cy='20' r='3' fill='%23009B77' opacity='0.5'/%3E%3Ccircle cx='20' cy='60' r='3' fill='%23FFD700' opacity='0.5'/%3E%3C/svg%3E");
+            background-repeat: repeat-y;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        body::before { left: 0; }
+        body::after { right: 0; }
+
+        @media(max-width: 768px) {
+            body { padding-left: 10px; padding-right: 10px; }
+            body::before, body::after { display: none; }
+        }
+
+        .ornament-top {
+            height: 12px;
+            background: repeating-linear-gradient(90deg, #009B77 0px, #009B77 20px, #FFD700 20px, #FFD700 40px, #1e3c72 40px, #1e3c72 60px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .main-header {
+            background: linear-gradient(135deg, #00a8cc 0%, #0d7377 100%);
+            padding: 15px 30px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1002;
+            margin-top: 12px;
+            border-radius: 0 0 15px 15px;
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; }
+        .logo {
+            width: 55px; height: 55px; background: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .brand-name { color: white; font-size: 1.8em; font-weight: 800; letter-spacing: 1px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .brand-tagline { color: #e0f7fa; font-size: 0.85em; font-weight: 400; margin-top: 4px; }
+
+        .lang-switcher {
+            position: fixed; top: 20px; right: 50px; z-index: 1003;
+            display: flex; gap: 5px; background: rgba(255,255,255,0.95);
+            padding: 5px; border-radius: 25px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 2px solid #009B77;
+        }
+        .lang-btn {
+            padding: 6px 14px; border: none; background: transparent;
+            color: #2c3e2d; font-weight: 700; cursor: pointer; border-radius: 20px;
+            transition: all 0.3s; font-size: 0.9rem;
+        }
+        .lang-btn.active { background: #009B77; color: white; }
+        .lang-btn:hover:not(.active) { background: #e8f5e8; }
+        @media(max-width: 768px) { .lang-switcher { right: 15px; top: 15px; } }
+
+        .hero { 
+            min-height: 80vh; background: linear-gradient(135deg, #1e3c72 0%, #009B77 100%); 
+            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; padding: 2rem; position: relative; overflow: hidden; 
+        }
+        .hero::before { 
+            content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; 
+            background: radial-gradient(circle at 30% 50%, rgba(255, 215, 0, 0.15) 0%, transparent 50%); 
+            pointer-events: none; 
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .hero h1 { 
+            font-size: clamp(2rem, 5vw, 3.5rem); color: white; margin-bottom: 1.5rem; 
+            font-weight: 800; line-height: 1.2; text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3); 
+        }
+        .hero p { font-size: clamp(1.1rem, 2.5vw, 1.5rem); color: rgba(255, 255, 255, 0.95); margin-bottom: 2rem; }
+        .hero-phone { 
+            display: inline-block; color: #FFD700; font-size: 1.8rem; font-weight: 700; 
+            text-decoration: none; margin-bottom: 2rem; padding: 0.8rem 1.5rem; 
+            border: 2px solid rgba(255, 215, 0, 0.5); border-radius: 50px; 
+            transition: all 0.3s ease; background: rgba(0,0,0,0.2);
+        }
+        .hero-phone:hover { background: rgba(255, 215, 0, 0.15); border-color: #FFD700; transform: scale(1.05); }
+        .btn-primary { 
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #1e3c72; 
+            border: none; padding: 1.2rem 3rem; font-size: 1.3rem; font-weight: 700; 
+            border-radius: 50px; cursor: pointer; transition: all 0.3s ease; 
+            box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4); text-decoration: none; display: inline-block; 
+        }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(255, 165, 0, 0.5); }
+        
+        .features { padding: 4rem 2rem; background: white; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-card { text-align: center; padding: 1.5rem; border-radius: 15px; transition: transform 0.3s; }
+        .feature-card:hover { transform: translateY(-5px); background: #f8faf8; }
+        .feature-icon { font-size: 3rem; margin-bottom: 1rem; }
+        .feature-title { font-size: 1.2rem; font-weight: 700; color: #009B77; margin-bottom: 0.5rem; }
+        .feature-text { color: #555; font-size: 0.95rem; }
+        
+        .products-section { padding: 4rem 2rem; max-width: 1200px; margin: 0 auto; }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 1rem; color: #1e3c72; font-weight: 800; position: relative; display: inline-block; width: 100%; }
+        .section-title::after { content: '◆◇◆'; display: block; color: #FFD700; font-size: 1rem; margin-top: 10px; letter-spacing: 5px; }
+        .section-subtitle { text-align: center; color: #555; margin-bottom: 3rem; font-size: 1.1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .product-card { background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); transition: all 0.3s ease; display: flex; flex-direction: column; border-top: 4px solid #009B77; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); }
+        .product-icon { width: 80px; height: 80px; background: linear-gradient(135deg, #009B77 0%, #1e3c72 100%); border-radius: 50%; margin: 0 auto 1.5rem; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: white; }
+        .product-title { font-size: 1.8rem; text-align: center; margin-bottom: 1.5rem; color: #1e3c72; font-weight: 700; }
+        .product-select { width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; margin-bottom: 1.5rem; background: white; cursor: pointer; }
+        .product-select:focus { outline: none; border-color: #009B77; }
+        .quantity-control { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: auto; }
+        .qty-btn { width: 45px; height: 45px; border: 2px solid #009B77; background: white; color: #009B77; border-radius: 50%; font-size: 1.5rem; font-weight: bold; cursor: pointer; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; }
+        .qty-btn:hover { background: #009B77; color: white; }
+        .qty-display { font-size: 2rem; font-weight: 700; color: #1e3c72; min-width: 60px; text-align: center; }
+        
+        .reviews-section { padding: 4rem 2rem; background: linear-gradient(135deg, #f5f7fa 0%, #e8f5e8 100%); }
+        .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .review-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-left: 4px solid #FFD700; }
+        .review-stars { color: #FFA500; font-size: 1.3rem; margin-bottom: 0.8rem; }
+        .review-text { color: #555; font-style: italic; margin-bottom: 1rem; line-height: 1.6; }
+        .review-author { font-weight: 700; color: #009B77; }
+        .review-date { color: #999; font-size: 0.85rem; }
+        .hidden-reviews { display: none !important; }
+
+        .faq-section { padding: 4rem 2rem; background: #f8faf8; max-width: 900px; margin: 0 auto; }
+        .faq-item { background: white; margin-bottom: 15px; padding: 20px 25px; border-radius: 12px; border-left: 4px solid #009B77; box-shadow: 0 2px 10px rgba(0,0,0,0.05); cursor: pointer; transition: all 0.3s; }
+        .faq-item:hover { transform: translateX(5px); box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .faq-q { font-weight: 700; color: #1e3c72; font-size: 1.1rem; margin-bottom: 8px; }
+        .faq-a { color: #555; line-height: 1.6; }
+
+        .order-section { background: white; padding: 3rem 2rem; max-width: 800px; margin: 4rem auto; border-radius: 20px; box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1); border: 1px solid #e8f5e8; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-label { display: block; margin-bottom: 0.5rem; color: #2c3e2d; font-weight: 600; font-size: 1rem; }
+        .form-input { width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; transition: border-color 0.3s ease; }
+        .form-input:focus { outline: none; border-color: #009B77; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        .total-display { background: linear-gradient(135deg, #009B77 0%, #1e3c72 100%); color: white; padding: 1.5rem; border-radius: 15px; text-align: center; margin: 2rem 0; font-size: 1.8rem; font-weight: 700; }
+        .btn-submit { width: 100%; background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%); color: #1e3c72; border: none; padding: 1.2rem; font-size: 1.3rem; font-weight: 700; border-radius: 50px; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 10px 30px rgba(255, 165, 0, 0.4); }
+        .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 15px 40px rgba(255, 165, 0, 0.5); }
+        
+        .contacts-section { padding: 4rem 2rem; background: #1e3c72; color: white; text-align: center; position: relative; }
+        .contacts-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 8px; background: repeating-linear-gradient(90deg, #FFD700 0px, #FFD700 20px, #009B77 20px, #009B77 40px); }
+        .contacts-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .contact-item { font-size: 1.3rem; margin-bottom: 1rem; }
+        .contact-item a { color: #FFD700; text-decoration: none; font-weight: 700; font-size: 1.5rem; }
+        .contact-item a:hover { text-decoration: underline; }
+        
+        footer { background: #0f1f3d; color: rgba(255,255,255,0.7); text-align: center; padding: 2rem; font-size: 0.9rem; border-top: 3px solid #009B77; }
+
+        @media(max-width: 768px) {
+            .products-grid, .reviews-grid, .features-grid { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            .hero-phone { font-size: 1.3rem; }
+            .section-title { font-size: 2rem; }
+            .order-section { margin: 2rem 1rem; }
+            .main-header { padding: 15px; }
+            .brand-name { font-size: 1.4em; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ornament-top"></div>
+
+    <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('ru')" id="btn-ru">RU</button>
+        <button class="lang-btn" onclick="setLang('ba')" id="btn-ba">БА</button>
+    </div>
+
+    <header class="main-header">
+        <div class="logo-container">
+            <div class="logo">
+                <svg viewBox="0 0 100 120" xmlns="http://www.w3.org/2000/svg" width="45" height="45">
+                    <path d="M50 5 C50 5 20 45 20 75 C20 95 35 110 50 110 C65 110 80 95 80 75 C80 45 50 5 50 5Z" fill="none" stroke="#00a8cc" stroke-width="4"/>
+                    <g fill="#14a085" stroke="#0d7377" stroke-width="1.5">
+                        <rect x="42" y="35" width="16" height="16" transform="rotate(45 50 43)"/>
+                        <rect x="45" y="38" width="10" height="10" transform="rotate(45 50 43)" fill="white" stroke="none"/>
+                        <path d="M35 60 Q30 65 35 70 Q40 75 45 70" fill="none" stroke-width="2.5"/>
+                        <path d="M65 60 Q70 65 65 70 Q60 75 55 70" fill="none" stroke-width="2.5"/>
+                        <path d="M30 75 Q25 80 30 85 Q35 90 40 85" fill="none" stroke-width="2.5"/>
+                        <path d="M70 75 Q75 80 70 85 Q65 90 60 85" fill="none" stroke-width="2.5"/>
+                        <rect x="46" y="60" width="8" height="8"/>
+                        <rect x="46" y="80" width="8" height="8"/>
+                    </g>
+                </svg>
+            </div>
+            <div>
+                <div class="brand-name">YanshishmaWater</div>
+                <div class="brand-tagline">Тау һыуы - тере көс | Горная вода - живая сила</div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-lang-key="main-title">Свежая вода из водомата за 30 минут</h1>
+            <p data-lang-key="main-subtitle">Доставка прямо к вашей двери на мкрн Кузнецовский затон</p>
+            <a href="tel:+79603825395" class="hero-phone">📞 +7 (960) 382-53-95</a>
+            <br>
+            <a href="#product" class="btn-primary" data-lang-key="call-btn">Заказать воду</a>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3 class="feature-title" data-lang-key="feat_1_title">Быстрая доставка</h3>
+                <p class="feature-text" data-lang-key="feat_1_text">Привезём воду за 30 минут в пределах района</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💧</div>
+                <h3 class="feature-title" data-lang-key="feat_2_title">Свежая вода</h3>
+                <p class="feature-text" data-lang-key="feat_2_text">Чистая питьевая вода из проверенного водомата</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title" data-lang-key="feat_3_title">Низкие цены</h3>
+                <p class="feature-text" data-lang-key="feat_3_text">От 80₽ за бутыль. Обмен тары дешевле!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🕐</div>
+                <h3 class="feature-title" data-lang-key="feat_4_title">Ежедневно</h3>
+                <p class="feature-text" data-lang-key="feat_4_text">Работаем без выходных с 9:00 до 21:00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="product">
+        <h2 class="section-title" data-lang-key="catalog-title">Выберите воду</h2>
+        <p class="section-subtitle" data-lang-key="catalog-alert">Набери товар на 300₽ и доставка бесплатная 🎉<br>Внимание: Мы работаем только по системе обмена тары. При получении заказа вам нужно передать курьеру пустые чистые бутылки 5л или 19л.</p>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-title" data-lang-key="prod-5">5 литров</h3>
+                <select class="product-select" data-product-id="5">
+                    <option value="80" data-type="Обмен тары">Обмен тары — 80₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="5">−</button>
+                    <span class="qty-display" data-qty-display="5">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="5">+</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-title" data-lang-key="prod-10">10 литров</h3>
+                <select class="product-select" data-product-id="10">
+                    <option value="180" data-type="Обмен тары">Обмен тары — 180₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="10">−</button>
+                    <span class="qty-display" data-qty-display="10">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="10">+</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-icon">💧</div>
+                <h3 class="product-title" data-lang-key="prod-19">19 литров</h3>
+                <select class="product-select" data-product-id="19">
+                    <option value="250" data-type="Обмен тары">Обмен тары — 250₽</option>
+                </select>
+                <div class="quantity-control">
+                    <button class="qty-btn" data-action="decrease" data-product-id="19">−</button>
+                    <span class="qty-display" data-qty-display="19">0</span>
+                    <button class="qty-btn" data-action="increase" data-product-id="19">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div style="text-align: center; margin: 30px 0 40px 0;">
+        <button id="go-to-form-btn" class="btn-primary" data-lang-key="order-btn" style="border-radius: 12px; padding: 20px 60px;">Оформить доставку</button>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <button id="show-reviews-btn" class="btn-primary" style="font-size: 1rem; padding: 12px 30px; border-radius: 12px;" data-lang-key="reviews-btn">Посмотреть отзывы</button>
+    </div>
+
+    <div id="reviews-block" class="hidden-reviews">
+        <section class="reviews-section">
+            <h2 class="section-title" data-lang-key="reviews-title">Отзывы наших клиентов</h2>
+            <p class="section-subtitle" data-lang-key="reviews-subtitle">Нам доверяют жители мкрн Кузнецовского затона</p>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Заказываю воду уже 3 месяца. Привозят быстро, вода вкусная. Обмен тары очень удобный!»</p>
+                    <div class="review-author">Альфия К.</div>
+                    <div class="review-date">ул. Геологов, 12</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Отличный сервис! Заказал 19 литров — привезли за 20 минут. Цена адекватная, курьер вежливый.»</p>
+                    <div class="review-author">Рустам М.</div>
+                    <div class="review-date">ул. Испытателей, 8</div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">★★★★★</div>
+                    <p class="review-text">«Берём воду для офиса — 2 бутыли по 19 литров в неделю. Всегда свежая, доставка точная.»</p>
+                    <div class="review-author">Офис «ТехноСервис»</div>
+                    <div class="review-date">ул. Бородинская, 24</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section class="faq-section">
+        <h2 class="section-title" data-lang-key="faq-title">Частые вопросы</h2>
+        <div class="faq-item">
+            <div class="faq-q" data-lang-key="faq_1_q">💧 Нужно ли возвращать пустые бутылки?</div>
+            <div class="faq-a" data-lang-key="faq_1_a">Да, мы работаем по системе обмена тары. Курьер заберёт пустую бутылку при доставке новой.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" data-lang-key="faq_2_q">🚚 Как быстро вы доставляете?</div>
+            <div class="faq-a" data-lang-key="faq_2_a">Привозим воду за 30 минут в пределах мкрн Кузнецовский затон.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" data-lang-key="faq_3_q"> Какая минимальная сумма заказа?</div>
+            <div class="faq-a" data-lang-key="faq_3_a">Минимальный заказ — 1 бутылка. При заказе от 300₽ доставка бесплатная!</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q" data-lang-key="faq_4_q">🕐 В какое время работаете?</div>
+            <div class="faq-a" data-lang-key="faq_4_a">Ежедневно без выходных с 9:00 до 21:00.</div>
+        </div>
+    </section>
+
+    <section class="order-section" id="order">
+        <h2 class="section-title" data-lang-key="form-title">Оформление заказа</h2>
+        <p class="section-subtitle"><span data-lang-key="form-call">Или позвоните:</span> <a href="tel:+79603825395" style="color:#009B77;font-weight:700;">+7 (960) 382-53-95</a></p>
+        <form id="orderForm">
+            <div class="form-group">
+                <label class="form-label" for="name" data-lang-key="input-name">Ваше имя</label>
+                <input type="text" id="name" class="form-input" placeholder="Имя" required>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="phone" data-lang-key="input-phone">Телефон</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+7 (999) 000-00-00" required>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label class="form-label" for="house" data-lang-key="input-address">Номер дома</label>
+                    <input type="text" id="house" class="form-input" placeholder="мкрн Кузнецовский затон, дом..." required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="apartment" data-lang-key="input-kv">Квартира</label>
+                    <input type="text" id="apartment" class="form-input" placeholder="Кв." required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="payment" data-lang-key="input-pay">Способ оплаты</label>
+                <select id="payment" class="form-input">
+                    <option value="Наличные курьеру">💵 Наличные курьеру</option>
+                    <option value="Перевод на карту (СБП)">💳 Перевод на карту (СБП)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="comment" data-lang-key="input-comment">Комментарий к заказу</label>
+                <textarea id="comment" class="form-input" placeholder="Например: оставьте у двери, не звоните в звонок..." style="resize: vertical; min-height: 80px;"></textarea>
+            </div>
+            
+            <div class="total-display">
+                <span data-lang-key="total-label">Итого:</span> <span id="totalAmount">0</span> ₽
+            </div>
+            <button type="submit" class="btn-submit" data-lang-key="submit-btn">Оформить заказ</button>
+        </form>
+    </section>
+
+    <section class="contacts-section">
+        <h2 data-lang-key="footer-title">Контакты</h2>
+        <div class="contact-item">📞 <span data-lang-key="footer-phone">Телефон:</span> <a href="tel:+79603825395">+7 (960) 382-53-95</a></div>
+        <div class="contact-item">📍 <span data-lang-key="footer-zone">Район доставки:</span> мкрн Кузнецовский затон, Уфа</div>
+        <div class="contact-item"> <span data-lang-key="footer-hours">Режим работы:</span> ежедневно 9:00 — 21:00</div>
+    </section>
+
+    <footer>
+        <p data-lang-key="footer-copy">© 2026 YanshishmaWater. Все права защищены. Свежая вода из водомата с доставкой на дом.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            ru: {
+                "main-title": "Свежая вода из водомата за 30 минут",
+                "main-subtitle": "Доставка прямо к вашей двери на мкрн Кузнецовский затон",
+                "call-btn": "Заказать воду",
+                "feat_1_title": "Быстрая доставка",
+                "feat_1_text": "Привезём воду за 30 минут в пределах района",
+                "feat_2_title": "Свежая вода",
+                "feat_2_text": "Чистая питьевая вода из проверенного водомата",
+                "feat_3_title": "Низкие цены",
+                "feat_3_text": "От 80₽ за бутыль. Обмен тары дешевле!",
+                "feat_4_title": "Ежедневно",
+                "feat_4_text": "Работаем без выходных с 9:00 до 21:00",
+                "catalog-title": "Выберите воду",
+                "catalog-alert": "Набери товар на 300₽ и доставка бесплатная 🎉<br>Внимание: Мы работаем только по системе обмена тары. При получении заказа вам нужно передать курьеру пустые чистые бутылки 5л или 19л.",
+                "prod-5": "5 литров",
+                "prod-10": "10 литров",
+                "prod-19": "19 литров",
+                "order-btn": "Оформить доставку",
+                "reviews-btn": "Посмотреть отзывы",
+                "reviews-title": "Отзывы наших клиентов",
+                "reviews-subtitle": "Нам доверяют жители мкрн Кузнецовского затона",
+                "faq-title": "Частые вопросы",
+                "faq_1_q": "💧 Нужно ли возвращать пустые бутылки?",
+                "faq_1_a": "Да, мы работаем по системе обмена тары. Курьер заберёт пустую бутылку при доставке новой.",
+                "faq_2_q": "🚚 Как быстро вы доставляете?",
+                "faq_2_a": "Привозим воду за 30 минут в пределах мкрн Кузнецовский затон.",
+                "faq_3_q": " Какая минимальная сумма заказа?",
+                "faq_3_a": "Минимальный заказ — 1 бутылка. При заказе от 300₽ доставка бесплатная!",
+                "faq_4_q": "🕐 В какое время работаете?",
+                "faq_4_a": "Ежедневно без выходных с 9:00 до 21:00.",
+                "form-title": "Оформление заказа",
+                "form-call": "Или позвоните:",
+                "input-name": "Ваше имя",
+                "input-phone": "Телефон",
+                "input-address": "Номер дома",
+                "input-kv": "Квартира",
+                "input-pay": "Способ оплаты",
+                "input-comment": "Комментарий к заказу",
+                "total-label": "Итого:",
+                "submit-btn": "Оформить заказ",
+                "footer-title": "Контакты",
+                "footer-phone": "Телефон:",
+                "footer-zone": "Район доставки:",
+                "footer-hours": "Режим работы:",
+                "footer-copy": "© 2026 YanshishmaWater. Все права защищены. Свежая вода из водомата с доставкой на дом."
+            },
+            ba: {
+                "main-title": "Водоматтан таҙа һыу 30 минут эсендә",
+                "main-subtitle": "Кузнецовский затон микрорайонында тура һеҙҙең ишегегеҙгә тиклем килтереү",
+                "call-btn": "Һыуға заказ бирергә",
+                "feat_1_title": "Тиҙ килтереү",
+                "feat_1_text": "Район сиктәрендә һыуҙы 30 минутта килтерәбеҙ",
+                "feat_2_title": "Таҙа һыу",
+                "feat_2_text": "Тикшерелгән водоматтан таҙа эсәр һыу",
+                "feat_3_title": "Түбән хаҡтар",
+                "feat_3_text": "Шешәһе 80₽-нан. Тара алмашыу осһоҙораҡ!",
+                "feat_4_title": "Көн һайын",
+                "feat_4_text": "Ялһыҙ эшләйбеҙ, иртәнге 9:00-ҙән киске 21:00-гә тиклем",
+                "catalog-title": "Һыуҙы һайлағыҙ",
+                "catalog-alert": "300₽-лыҡ тауар йыйһағыҙ, килтереү бушлай 🎉<br>Иғтибар: Беҙ тик тара алмашыу системаһы буйынса ғына эшләйбеҙ. Заказды алғанда курьерға 5 л йәки 19 л таҙа буш шешәләр тапшырырға кәрәк.",
+                "prod-5": "5 литр",
+                "prod-10": "10 литр",
+                "prod-19": "19 литр",
+                "order-btn": "Килтереүҙе рәсмиләштереү",
+                "reviews-btn": "Фекерҙәрҙе ҡарау",
+                "reviews-title": "Беҙҙең клиенттар фекере",
+                "reviews-subtitle": "Беҙгә Кузнецовский затон микрорайоны кешеләре ышана",
+                "faq-title": "Еш бирелгән һорауҙар",
+                "faq_1_q": "💧 Буш шешәләрҙе кире ҡайтарырға кәрәкме?",
+                "faq_1_a": "Эйе, беҙ тара алмашыу системаһы буйынса эшләйбеҙ. Курьер яңы һыу килтергәндә буш шешәне алып китә.",
+                "faq_2_q": "🚚 Нисә тиҙ килтерәһегеҙ?",
+                "faq_2_a": "Кузнецовский затон микрорайонында 30 минут эсендә килтерәбеҙ.",
+                "faq_3_q": " Минималь заказ суммаһы ниндәй?",
+                "faq_3_a": "Минималь заказ — 1 шешә. 300₽-нан заказда килтереү бушлай!",
+                "faq_4_q": "🕐 Ниндәй ваҡытта эшләйһегеҙ?",
+                "faq_4_a": "Ялһыҙ көн һайын 9:00-ҙән 21:00-гә тиклем.",
+                "form-title": "Заказды рәсмиләштереү",
+                "form-call": "Йәки шылтыратығыҙ:",
+                "input-name": "Һеҙҙең исемегеҙ",
+                "input-phone": "Телефон",
+                "input-address": "Өй номеры",
+                "input-kv": "Фатир",
+                "input-pay": "Түләү ысулы",
+                "input-comment": "Заказ буйынса комментарий",
+                "total-label": "Барыһы:",
+                "submit-btn": "Заказ бирергә",
+                "footer-title": "Контакттар",
+                "footer-phone": "Телефон:",
+                "footer-zone": "Килтереү районы:",
+                "footer-hours": "Эш режимы:",
+                "footer-copy": "© 2026 YanshishmaWater. Бөтә хоҡуҡтар яҡланған. Водоматтан таҙа һыуҙы өйгә килтереү."
+            }
+        };
+
+        function setLang(lang) {
+            localStorage.setItem('preferred_lang', lang);
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(`btn-${lang}`).classList.add('active');
+            
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    if (key === 'catalog-alert') {
+                        element.innerHTML = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            document.documentElement.lang = lang === 'ba' ? 'ba' : 'ru';
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred_lang') || 'ru';
+            setLang(savedLang);
+        });
+
+        const orderData = {
+            '5': { quantity: 0, price: 80, type: '(обмен тары)', name: '5 литров' },
+            '10': { quantity: 0, price: 180, type: '(обмен тары)', name: '10 литров' },
+            '19': { quantity: 0, price: 250, type: '(обмен тары)', name: '19 литров' }
+        };
+
+        document.querySelectorAll('.qty-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const productId = this.dataset.productId;
+                const action = this.dataset.action;
+                const display = document.querySelector(`[data-qty-display="${productId}"]`);
+                
+                if (action === 'increase') {
+                    orderData[productId].quantity++;
+                } else if (action === 'decrease' && orderData[productId].quantity > 0) {
+                    orderData[productId].quantity--;
+                }
+                display.textContent = orderData[productId].quantity;
+                updateTotal();
+            });
+        });
+
+        document.querySelectorAll('.product-select').forEach(select => {
+            select.addEventListener('change', function() {
+                const productId = this.dataset.productId;
+                const selectedOption = this.options[this.selectedIndex];
+                orderData[productId].price = parseInt(this.value);
+                orderData[productId].type = selectedOption.dataset.type;
+                updateTotal();
+            });
+        });
+
+        function updateTotal() {
+            let total = 0;
+            Object.values(orderData).forEach(item => {
+                total += item.quantity * item.price;
+            });
+            
+            let deliveryMessage = "";
+            const currentLang = localStorage.getItem('preferred_lang') || 'ru';
+            
+            if (total > 0) {
+                if (total < 300) {
+                    total += 100;
+                    deliveryMessage = currentLang === 'ba' ? " (килтереү 100 ₽ менән)" : " (с учетом доставки 100 ₽)";
+                } else {
+                    deliveryMessage = currentLang === 'ba' ? " (килтереү бушлай 🎉)" : " (доставка бесплатно 🎉)";
+                }
+            }
+            document.getElementById('totalAmount').innerHTML = `${total} <span style="font-size: 14px; font-weight: normal; display: block; margin-top: 4px; opacity: 0.9;">${deliveryMessage}</span>`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const orderBtn = document.getElementById('go-to-form-btn');
+            if (orderBtn) {
+                orderBtn.addEventListener('click', () => {
+                    const inputField = document.querySelector('input[type="tel"]');
+                    if (inputField) {
+                        inputField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        setTimeout(() => inputField.focus(), 600);
+                    }
+                });
+            }
+
+            const showReviewsBtn = document.getElementById('show-reviews-btn');
+            if (showReviewsBtn) {
+                showReviewsBtn.addEventListener('click', function() {
+                    const reviews = document.getElementById('reviews-block');
+                    const currentLang = localStorage.getItem('preferred_lang') || 'ru';
+                    if (reviews.classList.contains('hidden-reviews')) {
+                        reviews.classList.remove('hidden-reviews');
+                        this.textContent = currentLang === 'ba' ? 'Фекерҙәрҙе йәшереү' : 'Скрыть отзывы';
+                    } else {
+                        reviews.classList.add('hidden-reviews');
+                        this.textContent = currentLang === 'ba' ? 'Фекерҙәрҙе ҡарау' : 'Посмотреть отзывы';
+                    }
+                });
+            }
+        });
+
+        // === СТАНДАРТНАЯ ОТПРАВКА ФОРМЫ (для твоего сервера/ВК) ===
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const hasItems = Object.values(orderData).some(item => item.quantity > 0);
+            if (!hasItems) {
+                const currentLang = localStorage.getItem('preferred_lang') || 'ru';
+                alert(currentLang === 'ba' ? 'Зинһар, шешәләр һанын һайлағыҙ!' : 'Выберите количество бутылей!');
+                return;
+            }
+
+            const items = [];
+            Object.entries(orderData).forEach(([id, item]) => {
+                if (item.quantity > 0) {
+                    items.push({ name: item.name, type: item.type, quantity: item.quantity, price: item.price });
+                }
+            });
+
+            const orderPayload = {
+                name: document.getElementById('name').value,
+                phone: document.getElementById('phone').value,
+                house: document.getElementById('house').value,
+                apartment: document.getElementById('apartment').value,
+                comment: document.getElementById('comment').value,
+                payment: document.getElementById('payment').value,
+                items: items,
+                total: items.reduce((sum, item) => sum + (item.quantity * item.price), 0)
+            };
+
+            try {
+                const response = await fetch('/api/order', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(orderPayload)
+                });
+
+                if (response.ok) {
+                    const currentLang = localStorage.getItem('preferred_lang') || 'ru';
+                    alert(currentLang === 'ba' ? 'Заказ ҡабул ителде! Беҙ һеҙгә 5 минут эсендә шылтыратасаҡбыҙ.' : 'Заказ успешно принят! Мы перезвоним вам в течение 5 минут.');
+                    this.reset();
+                    Object.keys(orderData).forEach(id => {
+                        orderData[id].quantity = 0;
+                        document.querySelector(`[data-qty-display="${id}"]`).textContent = '0';
+                    });
+                    updateTotal();
+                } else {
+                    alert('Произошла ошибка при оформлении заказа. Позвоните нам: +7 (960) 382-53-95');
+                }
+            } catch (error) {
+                const currentLang = localStorage.getItem('preferred_lang') || 'ru';
+                alert(currentLang === 'ba' ? 'Заказ ҡабул ителде (демо режим)! Беҙ һеҙгә шылтыратасаҡбыҙ: +7 (960) 382-53-95' : 'Заказ успешно принят (демо режим)! Мы перезвоним вам: +7 (960) 382-53-95');
+                this.reset();
+                Object.keys(orderData).forEach(id => {
+                    orderData[id].quantity = 0;
+                    document.querySelector(`[data-qty-display="${id}"]`).textContent = '0';
+                });
+                updateTotal();
+            }
+        });
+    </script>
+</body>
+</html>
