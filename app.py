@@ -142,7 +142,7 @@ if __name__ == '__main__':
     print("📍 http://localhost:5000")
     print(" Уведомления отправляются в VK")
   
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8080))
     
     # На Railway debug должен быть False, чтобы не вешались логи
     app.run(host='0.0.0.0', port=port, debug=False)
