@@ -9,7 +9,7 @@ CORS(app)
 
 # ========= НАСТРОЙКИ VK ==========
 # Замени на свои данные!
-VK_TOKEN = 'vk1.a.Es316IW7vsr0Dhx6e9qQM0auqg3w3FxEeizu6Cspoo_ZjN6TXjwR1meh-AuQ3ZJ7uWs38BoY3XT_Sw9gqmVXaXJUiuHMenvg5Qo7grjCnGQLIGAEroiaWaTgwJaTd2qiG5rYgQacNdS2L2W1FpN1dbWqObSQlicjXW0HSMRJQj4WLhGVF-lnEqq8oRgTaJryi6GrskUsrW6QDCA6BYba7w'      # Токен сообщества VK
+VK_TOKEN = 'vk1.a.2nEkceV3rrBNcRQzWoUyECS_kQ4vsYRdUqeFxc3PmcWUqietSA_HGdpVR5-cmcrAj9je8FZV0EalgIoXW4_iEJwJWfQDvU2uNqPJ1r4cPrHqlTeSQfbUtlVTrBqDvdPPYX6ICNvMA4w6sEC5RNutzFIn7ZZbhftqWqXerAQG48jxLP08LBCT_sdhK92jVPGjYMWu8ldoP08nbSoJkKpA9w'      # Токен сообщества VK
 VK_GROUP_ID = 241042943                  # ID сообщества (число, без минуса)
 ADMIN_VK_ID = 838874588                  # Твой VK ID (кому слать уведомления)
 # ===================================
