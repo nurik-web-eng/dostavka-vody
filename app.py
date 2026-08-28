@@ -136,7 +136,9 @@ def get_order(order_id):
         if order['id'] == order_id:
             return jsonify(order), 200
     return jsonify({'error': 'Заказ не найден'}), 404
-
+@app.route('/test')
+def test():
+    return "✅ Сервер работает!"
 if __name__ == '__main__':
     print("🚰 Сервер доставки воды запущен!")
     print("📍 http://localhost:5000")
